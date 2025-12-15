@@ -4,7 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Geetha Ayurveda site loaded successfully!');
     
     // Add active class to current page nav link
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    let currentPage = window.location.pathname.split('/').pop();
+    if (!currentPage || currentPage === '' || currentPage === '/') {
+        currentPage = 'index.html';
+    }
     const navLinks = document.querySelectorAll('nav a');
     
     navLinks.forEach(link => {
