@@ -1,0 +1,25 @@
+# Geetha Ayurveda Admin Configuration
+
+# Site Settings
+site:
+  name: "Geetha Ayurveda"
+  description: "Ayurveda and medicine formulation articles"
+  url: "https://geetha-ayurveda.com"
+
+# Content Settings
+content:
+  articles:
+    free_articles_path: "/content/articles/free"
+    premium_articles_path: "/content/articles/premium"
+
+# Admin Settings
+admin:
+  enabled: true
+  require_authentication: true
+
+# Feature Flags
+features:
+  articles: true
+  products: true
+  services: true
+  contact_form: true
