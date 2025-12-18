@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* Brand palette */
+:root {
+  --color-clean: #A7D2CB;     /* background */
+  --color-butter: #F2D388;    /* boxes/cards */
+  --color-salmon: #C98474;    /* accents */
+  --color-eggplant: #874C62;  /* buttons/text */
+  --color-blue: #1E3A5F;      /* primary buttons */
+
+  /* Softer page background and surfaces */
+  --background: color-mix(in oklab, var(--color-clean) 35%, white 65%);
+  --surface: color-mix(in oklab, white 92%, var(--color-butter) 8%);
+  --muted: color-mix(in oklab, black 35%, white 65%);
+  --foreground: #111111;
+
+  --font-inconsolata: var(--font-inconsolata);
+}
+
+@theme inline {
+  --color-clean: var(--color-clean);
+  --color-butter: var(--color-butter);
+  --color-salmon: var(--color-salmon);
+  --color-eggplant: var(--color-eggplant);
+  --color-blue: var(--color-blue);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-sans: var(--font-inconsolata);
+  --font-mono: var(--font-inconsolata);
+}
+
+/* Keep a gentle dark variant (optional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: color-mix(in oklab, var(--color-clean) 85%, black 15%);
+    --foreground: color-mix(in oklab, var(--color-eggplant) 90%, white 10%);
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inconsolata), monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+}
+
+/* Swiper pagination colors tuned to palette */
+.swiper-pagination-bullet { background: color-mix(in oklab, var(--color-eggplant) 70%, white 30%); opacity: 0.7; }
+.swiper-pagination-bullet-active { background: var(--color-salmon); opacity: 1; }
