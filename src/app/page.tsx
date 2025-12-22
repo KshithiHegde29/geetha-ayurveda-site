@@ -23,8 +23,8 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="mt-12 grid sm:grid-cols-3 gap-6">
-        {["Free Articles", "Premium Articles", "PDF Downloads"].map((label) => (
+      <section className="mt-12 grid sm:grid-cols-2 gap-6">
+        {["Free Articles", "Premium Articles"].map((label) => (
           <div key={label} className="rounded-2xl p-5 bg-surface text-black border border-eggplant/10 shadow-sm">
             <h3 className="text-lg font-medium tracking-wide">{label}</h3>
             <p className="mt-2 text-sm text-muted">Learn, request, and download resources.</p>

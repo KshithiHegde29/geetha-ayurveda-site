@@ -7,6 +7,7 @@ const navItems = [
   { href: "/articles", label: "Articles" },
   { href: "/products", label: "Products" },
   { href: "/services", label: "Services" },
+  { href: "/login", label: "Login" },
 ];
 
 export function Header() {
